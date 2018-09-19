@@ -1,0 +1,7 @@
+<h1><%= @post.name %></h1>
+<p><%= @post.content %><p>
+
+<form method="POST" action="/posts/<%=@post.id%>/delete"> <!-- May have to swap :id with the actual @post.id -->
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" name="delete" id="delete">
+</form>

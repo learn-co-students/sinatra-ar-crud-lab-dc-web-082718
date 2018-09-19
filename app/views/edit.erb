@@ -1,0 +1,15 @@
+<!-- <h1>Update Post #<%= @post.name %></h1>
+<%#binding.pry%>
+<form method="POST" action="/posts/<%= @post.id %>">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <label>Post Name: <input type="text" name="name" value="<%= @post.name%>"></label>
+  <label>Post Content: <input type="text" name="content" value="<%= @post.content%>"></label>
+  <input type="submit" id="submit" value="submit">
+</form> -->
+
+<form method="post" action="/posts/<%=@post.id%>">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  Name<input type="text" value="<%=@post.name%>" name="name">
+  Contents<input type="text" value="<%=@post.content%>" name="content">
+  <input type="submit" value="submit">
+</form>
