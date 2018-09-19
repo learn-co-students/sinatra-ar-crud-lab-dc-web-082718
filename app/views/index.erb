@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Index Page</title>
+    </head>
+    <body>
+        <h1>Welcome to the Index</h1>
+
+        <ul>
+            <% @posts.each do |post| %>
+            <li>
+                Name: <%=post.name %><br/>
+                Content: <%=post.content %>
+                <br />
+            </li>
+            <% end %>
+        </ul>
+
+    </body>
+</html>
